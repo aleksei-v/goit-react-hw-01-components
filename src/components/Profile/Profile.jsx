@@ -1,32 +1,44 @@
 import PropTypes from 'prop-types';
+import {
+    Description,
+    StyledProfileWrapper,
+    MetaInfoWrapper,
+    MetaInfoWrapperEl,
+    BlackEl,
+    ImageBox
+} from './Profile.styled';
+
+
+
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     const { followers, views, likes } = stats;
-    return <div>
-        <div>
-            <img
+    return <StyledProfileWrapper>
+        <Description>
+            <ImageBox
                 src={avatar}
+                width="80"
                 alt="User avatar"
             />
-            <p>{username}</p>
+            <BlackEl>{username}</BlackEl>
             <p>@{tag}</p>
             <p>{location}</p>
-        </div>
+        </Description>
 
-        <ul>
-            <li>
-                <span>Followers </span>
+        <MetaInfoWrapper>
+            <MetaInfoWrapperEl>
+                <BlackEl>Followers</BlackEl>
                 <span>{followers}</span>
-            </li>
-            <li>
-                <span> Views </span>
+            </MetaInfoWrapperEl>
+            <MetaInfoWrapperEl>
+                <BlackEl> Views</BlackEl>
                 <span>{views}</span>
-            </li>
-            <li>
-                <span> Likes </span>
+            </MetaInfoWrapperEl>
+            <MetaInfoWrapperEl>
+                <BlackEl> Likes</BlackEl>
                 <span>{likes}</span>
-            </li>
-        </ul>
-    </div>
+            </MetaInfoWrapperEl>
+        </MetaInfoWrapper>
+    </StyledProfileWrapper>
 
 }
 
