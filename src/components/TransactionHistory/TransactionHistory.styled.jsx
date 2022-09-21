@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 
-export const TransactionHistoryWrapper = styled.section`
-    padding: 50px 150px;
-`
+
 
 export const TransactionHistoryTable = styled.table`
      table-layout: fixed;
@@ -20,20 +18,10 @@ export const TransactionHistoryThead = styled.thead`
     color: #fff;
     background-color: #55bdd6;
 `
-export const TransactionHistoryTheadEl = styled.th`
-    padding: 15px 0;
-`
-export const TransactionHistoryTbody = styled.tbody`
-    border: 1px solid black;
-`
 
 export const TransactionHistoryTbodyEl = styled.tr`
       background-color: #fff;
   &:nth-of-type(even) {
     background-color: #ecf2f3;
   }
-`
-export const TableCell = styled.td`
-    padding: 15px;
-     border: 1px solid #C0C0C0;
 `

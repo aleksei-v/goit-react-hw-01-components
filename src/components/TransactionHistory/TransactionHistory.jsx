@@ -1,37 +1,35 @@
 import PropTypes from 'prop-types';
 import {
-    TransactionHistoryWrapper,
     TransactionHistoryTable,
     TransactionHistoryThead,
-    TransactionHistoryTheadEl,
-    TransactionHistoryTbody,
-    TransactionHistoryTbodyEl,
-    TableCell
+    TransactionHistoryTbodyEl
 } from './TransactionHistory.styled';
+import { Box } from "../Box";
+
 
 export const TransactionHistory = ({ items }) => {
     return (
-        <TransactionHistoryWrapper>
+        <Box as="section" px={5} py={6}>
         <TransactionHistoryTable>
             <TransactionHistoryThead>
                 <tr>
-                    <TransactionHistoryTheadEl>Type</TransactionHistoryTheadEl>
-                    <TransactionHistoryTheadEl>Amount</TransactionHistoryTheadEl>
-                    <TransactionHistoryTheadEl>Currency</TransactionHistoryTheadEl>
+                    <Box as="th" py={4}>Type</Box>
+                    <Box as="th" py={4}>Amount</Box>
+                    <Box as="th" py={4}>Currency</Box>
                 </tr>
             </TransactionHistoryThead>
                 
-            <TransactionHistoryTbody>
+            <tbody >
                 {items.map(({ id, type, amount, currency }) => (
                     <TransactionHistoryTbodyEl key={id}>
-                        <TableCell>{type}</TableCell>
-                        <TableCell>{amount}</TableCell>
-                        <TableCell>{currency}</TableCell>
+                        <Box as="td" p={4} border="1px solid #C0C0C0">{type}</Box>
+                         <Box as="td" p={4} border="1px solid #C0C0C0">{amount}</Box>
+                         <Box as="td" p={4} border="1px solid #C0C0C0">{currency}</Box>
                     </TransactionHistoryTbodyEl>
                 ))}
-            </TransactionHistoryTbody>
+            </tbody>
         </TransactionHistoryTable>
-        </TransactionHistoryWrapper>
+        </Box>
     )
 }
 

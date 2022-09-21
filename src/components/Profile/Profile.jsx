@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
+import { Box } from "../Box";
 import {
-    Description,
-    StyledProfileWrapper,
-    MetaInfoWrapper,
     MetaInfoWrapperEl,
     BlackEl,
     ImageBox
@@ -12,8 +10,21 @@ import {
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     const { followers, views, likes } = stats;
-    return <StyledProfileWrapper>
-        <Description>
+    return <Box
+        width="235px"
+        ml="auto"
+        mr="auto"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        color="wrapperColor"
+        bg="white"
+    >
+        <Box
+            p="20px"
+            textAlign="center"
+        >
             <ImageBox
                 src={avatar}
                 width="80"
@@ -22,23 +33,27 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
             <BlackEl>{username}</BlackEl>
             <p>@{tag}</p>
             <p>{location}</p>
-        </Description>
+        </Box>
 
-        <MetaInfoWrapper>
+        <Box
+        display="flex"
+        justifyContent="center"
+          bg="background"
+        >
             <MetaInfoWrapperEl>
                 <BlackEl>Followers</BlackEl>
-                <span>{followers}</span>
+                <BlackEl>{followers}</BlackEl>
             </MetaInfoWrapperEl>
             <MetaInfoWrapperEl>
                 <BlackEl> Views</BlackEl>
-                <span>{views}</span>
+                <BlackEl>{views}</BlackEl>
             </MetaInfoWrapperEl>
             <MetaInfoWrapperEl>
                 <BlackEl> Likes</BlackEl>
-                <span>{likes}</span>
+                <BlackEl>{likes}</BlackEl>
             </MetaInfoWrapperEl>
-        </MetaInfoWrapper>
-    </StyledProfileWrapper>
+        </Box>
+    </Box>
 
 }
 

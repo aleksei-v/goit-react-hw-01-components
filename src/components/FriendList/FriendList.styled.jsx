@@ -1,19 +1,6 @@
 import styled from "@emotion/styled";
 
 
-
-export const FriendListWrapper = styled.section`
-    padding: 50px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-`
-
-export const FriendListStyled = styled.ul`
-    display: flex;
-    flex-direction: column;
-`
-
 export const FriendListEl = styled.li`
     display: flex;
     justify-content: flex-start;

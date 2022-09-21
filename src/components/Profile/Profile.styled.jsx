@@ -1,25 +1,6 @@
 import styled from "@emotion/styled";
 
 
-export const StyledProfileWrapper = styled.div`
-    width: 235px;
-    margin-left: auto;
-    margin-right: auto;
-    color: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-`
-
-export const MetaInfoWrapper = styled.ul`
-
-    display: flex;
-    justify-content: center;
-    background-color: #DCDCDC		;
-`
-
 export const MetaInfoWrapperEl = styled.li`
   
     padding: 15px;
@@ -28,13 +9,9 @@ export const MetaInfoWrapperEl = styled.li`
     flex-direction: column;
     align-items: center;
 `
-export const Description = styled.div`
-    padding: 20px;
-  
-    text-align: center;
-`
 export const BlackEl = styled.p`
     color: black;
+    margin-bottom: 10px;
 `
 export const ImageBox = styled.img`
     margin-left: auto;

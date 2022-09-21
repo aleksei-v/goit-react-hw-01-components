@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import {
-    FriendListWrapper,
-    FriendListStyled,
     FriendListEl,
     FriendStatus,
     FriendName
 } from './FriendList.styled';
+import { Box } from "../Box";
+
 
 
 export const FriendList = ({friends}) => {
     return (
-        <FriendListWrapper>
-            <FriendListStyled>
+        <Box as="section" p={5} width="200px" ml="auto" mr="auto">
+            <Box as="ul" display="flex" flexDirection="column">
                 {friends.map(({ avatar, name, isOnline, id}) => (
                     <FriendListEl key={id}>
                         <FriendStatus isOnline={isOnline}/>
@@ -19,8 +19,8 @@ export const FriendList = ({friends}) => {
                         <FriendName>{name}</FriendName>
                     </FriendListEl>
                 ))}
-            </FriendListStyled>
-        </FriendListWrapper>
+            </Box>
+        </Box>
     )
 }
 

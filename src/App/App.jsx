@@ -6,15 +6,14 @@ import user from '../data/user.json';
 import data from '../data/data.json';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
-import { Wrapper } from './App.styled';
-
+import { Box } from "../components/Box";
 
 
 export const App = () => {
   return (
     <>
 
-    <Wrapper>
+    <Box pt={5} pb={5} bg="wrapperColor">
       <Profile user={user}
         username={user.username}
         tag={user.tag}
@@ -25,7 +24,7 @@ export const App = () => {
       />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </Wrapper>
+    </Box>
       
       </>
   );
